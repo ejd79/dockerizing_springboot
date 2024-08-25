@@ -14,3 +14,15 @@ Write in Console:
 2. docker tag springboot-docker-demo erickjd79/springboot-docker-demo:0.1.RELEASE
 #### // Push the tagged image to docker hub repository (before it can be listed: docker images 
 3. docker push erickjd79/springboot-docker-demo:0.1.RELEASE
+
+## Create a Dockerfile to build MySQL Docker image
+## Create a Network
+docker network create springboot-mysql-net
+## Run mysql container
+docker run --name mysqldb --network springboot-mysql-net -e MYSQL_ROOT_PASSWORD=root -d mysql
+### to get the logs take the first 4 numbers of process id
+docker logs -f 1234 
+## ACCESS TO MYSQL DOCKER CONTAINER
+docker exec -it 1234 bash  
+mysql -u root -p  
+show databases;

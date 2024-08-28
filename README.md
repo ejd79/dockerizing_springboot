@@ -1,4 +1,4 @@
-## Create Dockerfile
+    ## Create Dockerfile
 ## Build Docker image 
 docker build -t springboot-docker-demo .
 ### ...tagging images
@@ -19,7 +19,7 @@ Write in Console:
 ## Create a Network
 docker network create springboot-mysql-net
 ## Run mysql container
-docker run --name mysqldb --network springboot-mysql-net -e MYSQL_ROOT_PASSWORD=root -d mysql
+docker run --rm --name mysqldb --network springboot-mysql-net -e MYSQL_ROOT_PASSWORD=root -d mysql
 ### to get the logs take the first 4 numbers of process id
 docker logs -f 1234 
 ## ACCESS TO MYSQL DOCKER CONTAINER

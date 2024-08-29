@@ -26,3 +26,7 @@ docker logs -f 1234
 docker exec -it 1234 bash  
 mysql -u root -p  
 show databases;
+
+## Docket Compose 
+### docker compose up -d --build   
+### docker compose down
